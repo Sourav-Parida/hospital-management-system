@@ -1,0 +1,60 @@
+.page-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.doctor-form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.doctor-form label {
+  flex-basis: 100%;
+  font-weight: bold;
+}
+
+.doctor-form input {
+  flex: 1 1 300px;
+  padding: 6px 10px;
+  font-size: 16px;
+}
+
+.doctor-form button {
+  padding: 8px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.doctors-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.doctors-table th,
+.doctors-table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+}
+
+.action-buttons button {
+  margin-right: 8px;
+  cursor: pointer;
+  padding: 4px 10px;
+}
+
+.edit-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}

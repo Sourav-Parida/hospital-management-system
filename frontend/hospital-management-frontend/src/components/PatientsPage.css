@@ -1,0 +1,91 @@
+.page-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.patient-form {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+.patient-form label {
+  display: block;
+  margin: 8px 0 4px;
+  font-weight: bold;
+}
+
+.patient-form input,
+.patient-form select,
+.patient-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.patient-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.patient-form button:hover {
+  background-color: #0056b3;
+}
+
+.patients-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patients-table th,
+.patients-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.patients-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.action-buttons button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-buttons .edit-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.action-buttons .edit-btn:hover {
+  background-color: #218838;
+}
+
+.action-buttons .delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.action-buttons .delete-btn:hover {
+  background-color: #c82333;
+}

@@ -1,0 +1,67 @@
+.page-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.appointment-form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.appointment-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.appointment-form button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+.appointments-table th,
+.appointments-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.appointments-table th {
+  background-color: #f4f4f4;
+  text-align: left;
+}
+
+.action-buttons button {
+  margin-right: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
