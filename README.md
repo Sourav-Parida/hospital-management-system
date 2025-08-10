@@ -34,25 +34,26 @@ A full-stack web application for managing hospital operations, built with:
 
 ## 📂 Project Structure
 
+```
 hospital-management-system/
 │
-├── backend/ # ASP.NET Core Web API
-│ ├── HospitalManagement.Api/
-│ ├── Data/ # EF Core DbContext
-│ ├── Models/ # Entity models
-│ ├── Controllers/ # API endpoints
-│ └── ...
+├── backend/                  # ASP.NET Core Web API
+│   ├── HospitalManagement.Api/
+│   ├── Data/                 # EF Core DbContext
+│   ├── Models/               # Entity models
+│   ├── Controllers/          # API endpoints
+│   └── ...
 │
-├── frontend/ # React.js frontend
-│ ├── hospital-management-frontend/
-│ ├── src/
-│ ├── public/
-│ └── ...
+├── frontend/                 # React.js frontend
+│   ├── hospital-management-frontend/
+│   ├── src/
+│   ├── public/
+│   └── ...
 │
 ├── .gitignore
 ├── README.md
 └── ...
-
+```
 
 ---
 
@@ -62,76 +63,77 @@ hospital-management-system/
 ```bash
 git clone https://github.com/YOUR_GITHUB_USERNAME/hospital-management-system.git
 cd hospital-management-system
+```
 
+### 2️⃣ Backend Setup (ASP.NET Core)
+1. Open `backend/HospitalManagement.Api` in **Visual Studio**.  
+2. Install required NuGet packages:  
+   - `Microsoft.EntityFrameworkCore`  
+   - `Microsoft.EntityFrameworkCore.SqlServer`  
+   - `Microsoft.EntityFrameworkCore.Tools`  
+3. Update **appsettings.json** with your SQL Server connection string:  
+   ```json
+   "ConnectionStrings": {
+     "DefaultConnection": "Server=YOUR_SERVER;Database=HospitalDB;Trusted_Connection=True;TrustServerCertificate=True;"
+   }
+   ```
+4. Apply migrations and update the database:  
+   ```bash
+   dotnet ef migrations add InitialCreate
+   dotnet ef database update
+   ```
+5. Run the backend:  
+   ```bash
+   dotnet run
+   ```
 
-2️⃣ Backend Setup (ASP.NET Core)
-Open backend/HospitalManagement.Api in Visual Studio.
+---
 
-Install required NuGet packages:
+### 3️⃣ Frontend Setup (React.js)
+1. Open `frontend/hospital-management-frontend` in **VS Code**.  
+2. Install dependencies:  
+   ```bash
+   npm install
+   ```
+3. Start the development server:  
+   ```bash
+   npm start
+   ```
+4. React app runs at:  
+   ```
+   http://localhost:3000
+   ```
 
-Microsoft.EntityFrameworkCore
+---
 
-Microsoft.EntityFrameworkCore.SqlServer
+## 🛠 Development Notes
+- Ensure **no special characters (#, spaces)** in your project path to avoid Webpack errors.  
+- During development:  
+  - Backend runs on: `https://localhost:5001` (or similar)  
+  - Frontend runs on: `http://localhost:3000`  
+- API requests from frontend will be proxied to backend (configure in `package.json`).  
 
-Microsoft.EntityFrameworkCore.Tools
+---
 
-Update appsettings.json with your SQL Server connection string:
-
-
-"ConnectionStrings": {
-  "DefaultConnection": "Server=YOUR_SERVER;Database=HospitalDB;Trusted_Connection=True;TrustServerCertificate=True;"
-}
-Apply migrations and update the database:
-
-dotnet ef migrations add InitialCreate
-dotnet ef database update
-Run the backend:
-
-dotnet run
-
-
-3️⃣ Frontend Setup (React.js)
-Open frontend/hospital-management-frontend in VS Code.
-
-Install dependencies:
-
-npm install
-Start the development server:
-
-npm start
-React app runs at:
-
-http://localhost:3000
-🛠 Development Notes
-Ensure no special characters (#, spaces) in your project path to avoid Webpack errors.
-
-During development:
-
-Backend runs on: https://localhost:5001 (or similar)
-
-Frontend runs on: http://localhost:3000
-
-API requests from frontend will be proxied to backend (configure in package.json).
-
-📦 Docker & Deployment
-(To be added later after core development)
+## 📦 Docker & Deployment
+*(To be added later after core development)*
 
 Planned deployment approach:
+- Create Dockerfile for backend and frontend  
+- Use Docker Compose for combined environment  
+- Deploy to Azure App Service or Azure Container Apps  
 
-Create Dockerfile for backend and frontend
+---
 
-Use Docker Compose for combined environment
-
-Deploy to Azure App Service or Azure Container Apps
-
-📜 License
+## 📜 License
 This project is licensed under the MIT License.
 
-👨‍💻 Authors
-Your Name – Initial work
+---
 
-✅ Status
+## 👨‍💻 Authors
+- **Your Name** – Initial work
+
+---
+
+### ✅ Status
 Project under active development.
-
-
-If you want, I can add a **"Development Progress Table"** to this README so you can tick off backend & frontend features as you finish them. That makes tracking our step-by-step build easier.
