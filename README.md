@@ -77,45 +77,30 @@ Microsoft.EntityFrameworkCore.Tools
 
 Update appsettings.json with your SQL Server connection string:
 
-json
-Copy
-Edit
+
 "ConnectionStrings": {
   "DefaultConnection": "Server=YOUR_SERVER;Database=HospitalDB;Trusted_Connection=True;TrustServerCertificate=True;"
 }
 Apply migrations and update the database:
 
-bash
-Copy
-Edit
 dotnet ef migrations add InitialCreate
 dotnet ef database update
 Run the backend:
 
-bash
-Copy
-Edit
 dotnet run
+
+
 3️⃣ Frontend Setup (React.js)
 Open frontend/hospital-management-frontend in VS Code.
 
 Install dependencies:
 
-bash
-Copy
-Edit
 npm install
 Start the development server:
 
-bash
-Copy
-Edit
 npm start
 React app runs at:
 
-arduino
-Copy
-Edit
 http://localhost:3000
 🛠 Development Notes
 Ensure no special characters (#, spaces) in your project path to avoid Webpack errors.
@@ -148,8 +133,5 @@ Your Name – Initial work
 ✅ Status
 Project under active development.
 
-vbnet
-Copy
-Edit
 
 If you want, I can add a **"Development Progress Table"** to this README so you can tick off backend & frontend features as you finish them. That makes tracking our step-by-step build easier.
